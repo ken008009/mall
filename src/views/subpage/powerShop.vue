@@ -83,21 +83,21 @@ const list = [
     maxAmount: 4000,
     tokenPrice: 100,
     tokenReleaseRate: lang('（10个月）300天释放完毕'),
-    directReferralReward: '10.5%'
+    directReferralReward: '25%'
   },
   {
     minAmount: 4500,
     maxAmount: 10000,
     tokenPrice: 75,
     tokenReleaseRate: lang('（20个月）600天释放完毕'),
-    directReferralReward: '10.5%'
+    directReferralReward: '25%'
   },
   {
     minAmount: 12000,
     maxAmount: 100000,
     tokenPrice: 50,
     tokenReleaseRate: lang('（25个月）750天释放完毕'),
-    directReferralReward: '10.5%'
+    directReferralReward: '25%'
   }
 ]
 
