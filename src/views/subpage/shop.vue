@@ -148,7 +148,11 @@ const show = $ref(false)
 const shopDialogRef = $ref(null)
 
 const handleShop = async (item) => {
-  shopDialogRef?.open(item)
+  if (!item) {
+    showFailToast(lang('商品信息错误'))
+    return
+  }
+  shopDialogRef?.open(item, 'shop')
 }
 
 const handleBack = () => {
