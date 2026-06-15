@@ -15,7 +15,7 @@
       <div class="shop-list">
         <div class="investment-card" v-for="item in list">
           <div class="card-main-title">{{item.minAmount}}~{{item.maxAmount}} USDT</div>
-          <div class="card-price">{{ lang('价格') }}：{{ userinfo[item.tokenPrice] }}</div>
+          <div class="card-price">{{ lang('价格') }}：{{ item.tokenPrice }}</div>
           <ul class="investment-details">
             <li>
               <span class="detail-label">{{ lang('解锁日期') }}：</span>
@@ -94,7 +94,8 @@ const list = [
   {
     minAmount: 50,
     maxAmount: 25000,
-    tokenPrice: 'priceTwo',
+    // tokenPrice: 'priceTwo',
+    tokenPrice: 50,
     unlockDate: `2026-9-15`,
     tokenReleaseRate: '3%',
     directReferralReward: '10%',
@@ -103,7 +104,8 @@ const list = [
   {
     minAmount: 30000,
     maxAmount: 50000,
-    tokenPrice: 'priceThree',
+    // tokenPrice: 'priceThree',
+    tokenPrice: 40,
     unlockDate: `2026-10-15`,
     tokenReleaseRate: '4%',
     directReferralReward: '10%',
@@ -112,7 +114,8 @@ const list = [
   {
     minAmount: 75000,
     maxAmount: 200000,
-    tokenPrice: 'priceFour',
+    // tokenPrice: 'priceFour',
+    tokenPrice: 30,
     unlockDate: `2026-11-15`,
     tokenReleaseRate: '5%',
     directReferralReward: '10%',
@@ -121,7 +124,8 @@ const list = [
   {
     minAmount: 300000,
     maxAmount: 500000,
-    tokenPrice: 'priceFive',
+    // tokenPrice: 'priceFive',
+    tokenPrice: 20,
     unlockDate: `2026-12-15`,
     tokenReleaseRate: '6%',
     directReferralReward: '10%',
@@ -130,7 +134,8 @@ const list = [
   {
     minAmount: 700000,
     maxAmount: 1000000,
-    tokenPrice: 'priceSix',
+    // tokenPrice: 'priceSix',
+    tokenPrice: 10,
     unlockDate: `2027-1-15`,
     tokenReleaseRate: '7%',
     directReferralReward: '10%',
