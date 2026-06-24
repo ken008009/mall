@@ -15,7 +15,7 @@
       <div class="shop-list">
         <div class="investment-card" v-for="item in list">
           <div class="card-main-title">{{item.minAmount}}~{{item.maxAmount}} USDT</div>
-          <div class="card-price">{{ lang('价格') }}：{{ item.tokenPrice }} ISPAY</div>
+          <div class="card-price">{{ lang('价格') }}：{{ userinfo[item.tokenPrice]}} ISPAY</div>
           <ul class="investment-details">
             <li>
               <span class="detail-label">{{ lang('代币释放') }}：</span>
@@ -81,21 +81,21 @@ const list = [
   {
     minAmount: 100,
     maxAmount: 4000,
-    tokenPrice: 600,
+    tokenPrice: 'priceOneNew',
     tokenReleaseRate: lang('（10个月）300天释放完毕'),
     directReferralReward: '25%'
   },
   {
     minAmount: 4500,
     maxAmount: 10000,
-    tokenPrice: 506.25,
+    tokenPrice: 'priceTwoNew',
     tokenReleaseRate: lang('（20个月）600天释放完毕'),
     directReferralReward: '25%'
   },
   {
     minAmount: 12000,
     maxAmount: 100000,
-    tokenPrice: 337.5,
+    tokenPrice: 'priceThreeNew',
     tokenReleaseRate: lang('（25个月）750天释放完毕'),
     directReferralReward: '25%'
   }
