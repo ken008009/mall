@@ -155,6 +155,7 @@ const menuType = [
   ['12', lang('新预售2认购')],
   ['13', lang('新预售2购推荐收益')],
   ['14', lang('每日ispay收益')],
+  ['15', lang('领导奖收益')],
 ]
 const expandedKeys = $ref([]);
 const selectedKeys = $ref([]);
