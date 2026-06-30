@@ -28,7 +28,16 @@ export default defineConfig({
     build: {
         outDir: "dist",
         assetsDir: "static",
-        assetsInlineLimit: 150000
+        assetsInlineLimit: 150000,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('@plaoc/plugins') || id.includes('@dweb-browser')) {
+                        return 'plaoc';
+                    }
+                },
+            },
+        },
     },
     css: {
         preprocessorOptions: {

@@ -65,8 +65,6 @@ import request from "@/tools/request";
 import { f7 } from 'framework7-vue'
 import { showFailToast, showSuccessToast } from "vant";
 import { useI18n } from 'vue-i18n'
-import BiwMeta from '@/services/index'
-import { $WALLET_AUTHORIZE_ADDRESS_TYPE, $WALLET_PLAOC_PATH, $WALLET_SIGNATURE_TYPE, CHAIN_NAME, type $WEALLET_ADDRESS_RESPONSE } from '@/services/biwmeta/types';
 import lang from '@/i18n/index'
 const person = userPerson();
 const userinfo = $computed(() => person.userinfo);

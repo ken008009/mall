@@ -12,21 +12,27 @@
 </template>
 <script setup lang="ts">
 import ChildrenHeader from '../../components/header/childrenHeader.vue'
-import { dwebServiceWorker } from "@plaoc/plugins"
+import userPerson from '@/pinia/person'
 import lang from '@/i18n/index'
+import { isDwebEnv, restartDwebApp } from '@/tools/dweb'
 import { useI18n } from 'vue-i18n'
 import Toggle from '../../components/Toggle/Toggle.vue'
 import { ref } from 'vue'
 const { locale } = useI18n()
+const person = userPerson()
 
 let toast: any = ref(null)
 
 let checked = ref(localStorage.getItem('lan') === 'en' ? true : false)
 
-const switchUser = () => {
+const switchUser = async () => {
   localStorage.removeItem("token");
   localStorage.removeItem("account");
-  dwebServiceWorker.restart()
+  if (isDwebEnv()) {
+    await restartDwebApp()
+    return
+  }
+  person.outLogin()
 }
 
 const onChangeLanguage = (value: boolean) => {

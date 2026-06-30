@@ -79,7 +79,6 @@ import userPerson from "@/pinia/person";
 import userSystem from "@/pinia/system";
 import { Contract, ETH } from "@/tools/contract";
 import lang from '@/i18n/index'
-import BiwMeta from '@/services/index'
 import request from "@/tools/request";
 import { showLoadingToast, closeToast, showFailToast, showDialog, closeDialog, showSuccessToast } from "vant";
 import { useRouter } from 'vue-router'
